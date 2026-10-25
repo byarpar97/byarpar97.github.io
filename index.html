@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#071a2b" />
+    <link rel="icon" href="/assets/sasa_logo.webp" type="image/webp" />
     <meta
       name="description"
       content="Step-by-step Sasa VPN installation guides for macOS and Windows."
@@ -87,18 +88,11 @@
       }
 
       .brand-mark {
-        display: grid;
+        display: block;
         width: 38px;
         height: 38px;
-        place-items: center;
-        border: 1px solid rgba(97, 245, 221, 0.46);
-        border-radius: 50%;
-        background: linear-gradient(145deg, #58ead0, #038ba4 75%);
-        box-shadow: 0 0 28px rgba(24, 200, 189, 0.2);
-        color: var(--navy);
-        font-size: 25px;
-        font-weight: 900;
-        line-height: 1;
+        flex: 0 0 auto;
+        object-fit: contain;
       }
 
       .nav-links {
@@ -362,6 +356,26 @@
         border-radius: 12px;
         padding: 12px;
         background: rgba(255, 255, 255, 0.035);
+        color: inherit;
+        text-decoration: none;
+        transition: border-color 160ms ease, background 160ms ease, transform 160ms ease;
+      }
+
+      .setup-row:hover {
+        transform: translateY(-1px);
+        border-color: rgba(92, 224, 214, 0.42);
+        background: rgba(255, 255, 255, 0.07);
+      }
+
+      .setup-row:focus-visible {
+        outline: 3px solid var(--teal);
+        outline-offset: 3px;
+      }
+
+      .setup-arrow {
+        margin-left: auto;
+        color: #70e4d6 !important;
+        font-size: 17px !important;
       }
 
       .setup-row + .setup-row {
@@ -640,6 +654,169 @@
         height: 20px;
       }
 
+      .terminal-section {
+        margin-top: 28px;
+        border: 1px solid rgba(213, 235, 238, 0.13);
+        border-radius: 22px;
+        padding: 27px;
+        background:
+          radial-gradient(circle at 90% 0%, rgba(24, 200, 189, 0.1), transparent 32%),
+          var(--navy-soft);
+        color: #fff;
+      }
+
+      .terminal-section .eyebrow {
+        margin-bottom: 9px;
+        color: #79dad2;
+      }
+
+      .terminal-heading {
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        gap: 24px;
+        margin-bottom: 20px;
+      }
+
+      .terminal-heading h2 {
+        margin: 0;
+        font-size: clamp(24px, 3.2vw, 32px);
+        letter-spacing: -0.045em;
+      }
+
+      .terminal-heading p {
+        max-width: 420px;
+        margin: 0;
+        color: #acc0cb;
+        font-size: 12px;
+      }
+
+      .terminal-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 15px;
+      }
+
+      .terminal-card {
+        min-width: 0;
+        border: 1px solid rgba(214, 236, 240, 0.12);
+        border-radius: 16px;
+        padding: 16px;
+        background: rgba(4, 19, 31, 0.72);
+      }
+
+      .terminal-card-head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        margin-bottom: 12px;
+      }
+
+      .terminal-card-head strong {
+        font-size: 13px;
+      }
+
+      .terminal-label {
+        border: 1px solid rgba(255, 255, 255, 0.13);
+        border-radius: 999px;
+        padding: 4px 9px;
+        color: #a9c0ca;
+        font-size: 10px;
+        font-weight: 750;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+
+      .terminal-shell {
+        overflow: hidden;
+        border: 1px solid rgba(201, 227, 232, 0.12);
+        border-radius: 12px;
+        background: #04111d;
+      }
+
+      .terminal-shell pre {
+        overflow-x: auto;
+        margin: 0;
+        padding: 15px;
+        color: #d7e9ed;
+        font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+        font-size: 11px;
+        line-height: 1.65;
+        tab-size: 2;
+      }
+
+      .terminal-shell code {
+        border: 0;
+        padding: 0;
+        background: transparent;
+        color: inherit;
+        font: inherit;
+      }
+
+      .terminal-actions {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        margin-top: 10px;
+      }
+
+      .copy-button {
+        display: inline-flex;
+        min-height: 34px;
+        align-items: center;
+        gap: 7px;
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        border-radius: 9px;
+        padding: 0 10px;
+        background: transparent;
+        color: #d5e7eb;
+        font: inherit;
+        font-size: 11px;
+        font-weight: 700;
+        cursor: pointer;
+      }
+
+      .copy-button:hover {
+        border-color: rgba(121, 218, 210, 0.6);
+        color: #8de6db;
+      }
+
+      .copy-button svg {
+        width: 14px;
+        height: 14px;
+      }
+
+      .copy-feedback {
+        min-height: 18px;
+        color: #8de6db;
+        font-size: 10px;
+      }
+
+      .command-note {
+        margin: 9px 0 0;
+        color: #96acb7;
+        font-size: 10px;
+      }
+
+      .terminal-note {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        margin-top: 16px;
+        border: 1px solid rgba(246, 185, 91, 0.26);
+        border-radius: 12px;
+        padding: 12px 14px;
+        background: rgba(246, 185, 91, 0.07);
+        color: #e9cf9d;
+        font-size: 11px;
+      }
+
+      .terminal-note strong {
+        color: #ffe2a7;
+      }
+
       .safety h2 {
         margin: 0 0 5px;
         font-size: 15px;
@@ -860,6 +1037,22 @@
           gap: 16px;
         }
 
+        .terminal-section {
+          padding: 20px 16px;
+        }
+
+        .terminal-heading {
+          display: block;
+        }
+
+        .terminal-heading h2 {
+          margin-bottom: 8px;
+        }
+
+        .terminal-grid {
+          grid-template-columns: 1fr;
+        }
+
         .platform-head {
           flex-wrap: wrap;
           padding: 20px 19px 16px;
@@ -941,7 +1134,7 @@
     <header class="site-header">
       <nav class="nav shell" aria-label="Main navigation">
         <a class="brand" href="#top" aria-label="Sasa VPN desktop setup home">
-          <span class="brand-mark" aria-hidden="true">S</span>
+          <img class="brand-mark" src="/assets/sasa_logo.webp" alt="" aria-hidden="true" />
           <span>Sasa <span style="font-weight: 500; color: #9bb1bc">/ setup</span></span>
         </a>
         <div class="nav-links">
@@ -970,8 +1163,8 @@
           <p class="hero-note">macOS 13 or later · Windows 10/11, 64-bit</p>
         </div>
 
-        <div class="hero-art" aria-hidden="true">
-          <div class="orb"></div>
+        <div class="hero-art">
+          <div class="orb" aria-hidden="true"></div>
           <div class="setup-card">
             <div class="window-top">
               <span class="window-dots"><i></i><i></i><i></i></span>
@@ -979,14 +1172,16 @@
             </div>
             <h2>Your setup, made simple</h2>
             <p>Choose your platform and follow the steps.</p>
-            <div class="setup-row">
+            <a class="setup-row" href="#macos" aria-label="View macOS installation guide">
               <span class="mini-icon">⌘</span>
               <span><strong>macOS</strong><span>Signed installer in preparation</span></span>
-            </div>
-            <div class="setup-row">
+              <span class="setup-arrow" aria-hidden="true">↘</span>
+            </a>
+            <a class="setup-row" href="#windows" aria-label="View Windows installation guide">
               <span class="mini-icon">⊞</span>
               <span><strong>Windows</strong><span>Public installer in preparation</span></span>
-            </div>
+              <span class="setup-arrow" aria-hidden="true">↘</span>
+            </a>
           </div>
         </div>
       </div>
@@ -1099,6 +1294,70 @@
           </article>
         </div>
 
+        <section class="terminal-section" id="terminal" aria-labelledby="terminal-heading">
+          <div class="terminal-heading">
+            <div>
+              <p class="eyebrow">Command line</p>
+              <h2 id="terminal-heading">Install from Terminal or PowerShell</h2>
+            </div>
+            <p>Use these commands after downloading the signed installer from this page. The commands won’t install the current unsigned previews.</p>
+          </div>
+          <div class="terminal-grid">
+            <article class="terminal-card">
+              <div class="terminal-card-head">
+                <strong>Open the macOS installer</strong>
+                <span class="terminal-label">Terminal</span>
+              </div>
+              <div class="terminal-shell">
+                <pre><code id="macos-command">open "$HOME/Downloads/SasaVPN-macOS-signed-notarized.dmg"</code></pre>
+              </div>
+              <div class="terminal-actions">
+                <button class="copy-button" type="button" data-copy="macos-command" aria-label="Copy macOS Terminal command">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"/></svg>
+                  Copy command
+                </button>
+                <span class="copy-feedback" role="status" aria-live="polite"></span>
+              </div>
+              <p class="command-note">After the disk image opens, drag Sasa VPN to Applications in Finder.</p>
+            </article>
+
+            <article class="terminal-card">
+              <div class="terminal-card-head">
+                <strong>Verify and start the Windows installer</strong>
+                <span class="terminal-label">PowerShell</span>
+              </div>
+              <div class="terminal-shell">
+                <pre><code id="windows-command">$installer = Get-ChildItem "$env:USERPROFILE\Downloads\SasaVPN-Setup-*.exe" |
+  Sort-Object LastWriteTime -Descending |
+  Select-Object -First 1
+
+if (-not $installer) {
+  throw "Download the signed Sasa VPN installer first."
+}
+
+$signature = Get-AuthenticodeSignature -FilePath $installer.FullName
+if ($signature.Status -ne "Valid") {
+  throw "Installer signature is not valid. Do not run this preview."
+}
+
+Start-Process -FilePath $installer.FullName</code></pre>
+              </div>
+              <div class="terminal-actions">
+                <button class="copy-button" type="button" data-copy="windows-command" aria-label="Copy Windows PowerShell command">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"/></svg>
+                  Copy command
+                </button>
+                <span class="copy-feedback" role="status" aria-live="polite"></span>
+              </div>
+              <p class="command-note">The command checks the installer signature before launching it.</p>
+            </article>
+          </div>
+          <div class="terminal-note">
+            <span aria-hidden="true">●</span>
+            <span><strong>Downloads are still gated.</strong> The Mac preview is unsigned, and the Windows preview is private and unsigned. Wait for signed public installers before using these commands.</span>
+          </div>
+        </section>
+
         <aside class="safety" aria-labelledby="safety-heading">
           <span class="safety-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
@@ -1156,5 +1415,19 @@
         <a href="#top" style="text-decoration: none">Back to top ↑</a>
       </div>
     </footer>
+    <script>
+      document.querySelectorAll("[data-copy]").forEach((button) => {
+        button.addEventListener("click", async () => {
+          const code = document.getElementById(button.dataset.copy);
+          const feedback = button.closest(".terminal-card").querySelector(".copy-feedback");
+          try {
+            await navigator.clipboard.writeText(code.textContent);
+            feedback.textContent = "Copied";
+          } catch {
+            feedback.textContent = "Select and copy the command";
+          }
+        });
+      });
+    </script>
   </body>
 </html>
