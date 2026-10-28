@@ -1,0 +1,28 @@
+:root{--ink:#071e32;--muted:#61758a;--teal:#009d98;--mint:#00c7ac;--deep:#087e79;--line:#dbeaed;--shadow:0 16px 48px rgba(20,79,94,.07);--page-width:1200px;color-scheme:light;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:#fafdff;font-synthesis:none;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased}
+*{box-sizing:border-box}
+body{margin:0;background:#fafdff;line-height:1.7}
+a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer}button:focus-visible,a:focus-visible{outline:3px solid #00a99e;outline-offset:4px}
+.shell{max-width:var(--page-width);margin:auto;padding-left:26px;padding-right:26px}
+.header{position:sticky;top:0;z-index:100;background:rgba(251,254,255,.93);backdrop-filter:blur(18px);border-bottom:1px solid rgba(207,235,236,.7)}
+.nav{min-height:83px;display:flex;align-items:center;justify-content:space-between;gap:22px}
+.brand{display:flex;align-items:center;gap:11px;font-weight:850;font-size:24px;letter-spacing:-1.2px;white-space:nowrap}
+.logo{width:38px;height:38px;display:inline-block;flex:none;background:url("/assets/sasa-logo.png") center/contain no-repeat;filter:drop-shadow(0 3px 3px rgba(0,103,111,.12))}.logo.small{width:25px;height:25px}
+.navlinks{display:flex;align-items:center;gap:39px;margin-left:60px}
+.navlink{color:#354a61;font-size:14px;font-weight:600;position:relative;padding:30px 0}
+.navlink:hover{color:var(--deep)}
+.header-right{display:flex;align-items:center;gap:16px}.language{display:flex;align-items:center;gap:7px;font-size:12px;font-weight:650;color:#496377}
+.menu-btn{display:none;background:#e6f7f7;border:0;border-radius:12px;padding:10px;color:var(--ink)}
+.btn{border:1px solid transparent;display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:44px;padding:12px 22px;border-radius:11px;font-size:13px;font-weight:800;transition:transform .15s,box-shadow .15s,background .15s;white-space:nowrap}
+.btn:hover{transform:translateY(-2px)}.btn.primary{color:white;background:linear-gradient(110deg,#00cbb0 0%,#008e84 100%);box-shadow:0 7px 20px rgba(0,155,145,.16)}.btn.primary:hover{box-shadow:0 10px 26px rgba(0,155,145,.24)}.btn.sm{min-height:42px;padding:10px 21px}.arr{font-size:19px;line-height:0}
+.legal-main{max-width:960px;margin:0 auto;padding:54px 26px 72px}
+.legal-main h1,.legal-main h2,.legal-main p{margin-top:0}
+.legal-main h1{font-size:clamp(38px,5.2vw,58px);letter-spacing:-3px;line-height:1.1;margin-bottom:12px;font-weight:850}
+.legal-main h2{font-size:22px;letter-spacing:-.55px;line-height:1.3;margin:34px 0 9px;font-weight:780}
+.legal-main p,.legal-main li{color:#526d80;line-height:1.7;font-size:15px}
+.legal-main a:not(.btn){color:var(--deep);font-weight:650;text-decoration:underline;text-underline-offset:3px}
+.meta{font-size:15px!important;color:#7c93a8!important;margin-bottom:30px!important}
+.links{display:flex;gap:22px;flex-wrap:wrap;margin-top:34px;padding-top:22px;border-top:1px solid #e5f2f2}
+.footer{border-top:1px solid #e5f2f2;background:#f9fdfd;padding:26px 0}.footer-row{display:flex;align-items:center;justify-content:space-between;gap:20px}.footer .brand{font-size:17px}.footer-links{display:flex;gap:22px;align-items:center}.footer-links a{font-size:11px;color:#61768b}.footer-links a:hover{text-decoration:underline}.footer-end{font-size:11px;color:#8da2af}
+@media(max-width:1000px){.navlinks{margin-left:10px;gap:24px}.header-right{gap:7px}}
+@media(max-width:760px){.shell{padding:0 18px}.nav{min-height:70px}.brand{font-size:21px}.navlinks{display:none;position:absolute;left:12px;right:12px;top:66px;padding:8px 16px;flex-direction:column;align-items:stretch;gap:0;margin:0;background:white;border:1px solid #e2efef;border-radius:13px;box-shadow:var(--shadow)}.navlinks.open{display:flex}.navlink{padding:14px 8px}.menu-btn{display:grid;place-items:center}.language{display:none}.header-right .btn{padding:10px 12px;font-size:11px;min-height:37px}.legal-main{padding:38px 22px 56px}.legal-main h1{letter-spacing:-2.2px}.legal-main h2{margin-top:28px}.footer-row{align-items:flex-start;flex-wrap:wrap}.footer-links{gap:14px;flex-wrap:wrap}.footer-end{width:100%}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
