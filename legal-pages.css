@@ -26,3 +26,10 @@ a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer}button:f
 @media(max-width:1000px){.navlinks{margin-left:10px;gap:24px}.header-right{gap:7px}}
 @media(max-width:760px){.shell{padding:0 18px}.nav{min-height:70px}.brand{font-size:21px}.navlinks{display:none;position:absolute;left:12px;right:12px;top:66px;padding:8px 16px;flex-direction:column;align-items:stretch;gap:0;margin:0;background:white;border:1px solid #e2efef;border-radius:13px;box-shadow:var(--shadow)}.navlinks.open{display:flex}.navlink{padding:14px 8px}.menu-btn{display:grid;place-items:center}.language{display:none}.header-right .btn{padding:10px 12px;font-size:11px;min-height:37px}.legal-main{padding:38px 22px 56px}.legal-main h1{letter-spacing:-2.2px}.legal-main h2{margin-top:28px}.footer-row{align-items:flex-start;flex-wrap:wrap}.footer-links{gap:14px;flex-wrap:wrap}.footer-end{width:100%}}
 @media(prefers-reduced-motion:reduce){*{transition:none!important}}
+.header{background:#061827;border-bottom:1px solid rgba(140,211,215,.15)}
+.header .brand{color:#fff}.navlink{color:#b8d0da}.navlink:hover{color:#18d5c9}.language{color:#a4c1cb}
+.btn.primary{background:#18d5c9;color:#06272e;box-shadow:none}.btn.primary:hover{background:#64e5dc;box-shadow:none}
+.menu-btn{background:#0d3e49;color:#d8fbf8}
+.legal-main h1{color:#102e3c}.legal-main h2{color:#103746}
+.footer{background:#051725;border-top:1px solid rgba(140,211,215,.15)}.footer .brand{color:#fff}.footer-links a,.footer-end{color:#9cb8c2}.footer-links a:hover{color:#18d5c9}
+@media(max-width:760px){.navlinks{background:#092235;border-color:#24505b}}
